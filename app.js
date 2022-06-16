@@ -13,7 +13,7 @@ const MONGOLAB_URI = process.env.MONGOLAB_URI;
 app.use(notFound);
 const start = async () =>{
     try{
-        await connectDB(MONGOLAB_URI || MONGO_URI);
+        await connectDB(MONGOLAB_URI || process.env.MONGO_URI);
         app.listen(port,()=>{
             console.log(`server is listening on port ${port}...`)
             console.log(MONGOLAB_URI);

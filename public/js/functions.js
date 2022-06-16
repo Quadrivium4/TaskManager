@@ -11,11 +11,8 @@ const getAllTask = async() =>{
             //console.log(data);
             data = data1;
         });*/
-        let promise = await response.json();
-        let data1 = await promise.then(data=>{
-            console.log("hi");
-        });
-        return promise;
+        let data = await response.json();
+        return data;
         //console.log(data);
     } catch (error) {
         return "error";
