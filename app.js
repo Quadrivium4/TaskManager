@@ -7,4 +7,4 @@ const server = http.createServer((req, res)=>{
         res.end("page not found sorry quadrivium");
     }
 })
-server.listen(process.env.PORT);
+server.listen(process.env.PORT || 3000);
