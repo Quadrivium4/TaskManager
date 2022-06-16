@@ -2,7 +2,7 @@ require("dotenv").config();
 const connectDB = require("./db/connect");
 const express = require("express");
 const app = express();
-const port = 5000;
+const port = process.env.PORT || 5000;
 const tasks = require("./routes/tasks");
 const notFound = require("./middleware/404");
 app.use(express.json());
