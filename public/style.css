@@ -1,5 +1,115 @@
-* {
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+body{
+    background-color: rgb(236, 236, 236);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: sans-serif;
+}
+body > h1{   
+    font-size: 40px;
+}
+#main{
+    width: 80%;
+    background-color: white;
+    max-width: 1200px;
+    margin-top: 20px;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.596);
+    padding: 25px;
+}
+#tasks{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+
+}
+#newtask{
+    display: flex;
+    width: 100%;
+}
+.task{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 10px 0;
+}
+.task h2{
+    margin-left: 10px;
+}
+.task div[type="checkbox"]{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background-color: rgb(5, 5, 5);
+}
+.check-arrow{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transform: rotateZ(35deg);
+    margin-left: 4px;
+}
+.check-arrow span[n="1"]{
+    all: unset;
+    position: absolute;
+    display: block;
+    width: 3px;
+    height: 16px;
+    background-color: rgb(96, 158, 194);
+}
+.check-arrow span[n="2"]{
+    all: unset;
+    position: absolute;
+    display: block;
+    width: 3px;
+    height: 9px;
+    margin-top: 12px;
+    margin-left: -6px;
+    background-color: rgb(96, 158, 194);
+    transform: rotateZ(90deg);
+}
+.btn{
+    all: unset;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-transform: lowercase;
+    padding: 5px;
+    background-color: rgb(96, 158, 194);
+    color: white;
+    width: 20px;
+    height: 20px;
+    border-radius: 2px;
+    margin-left: 5px;
+}
+#name{
+    all: unset;
+    font-size: 18px;
+    padding: 5px 10px;
+    border: 1px solid black;
+}
+#submit-btn{
+    all: unset;
+    margin-left: 10px;
+    padding: 10px 20px;
+    font-size: 18px;
+    text-transform: uppercase;
+    background-color: rgb(96, 158, 194);
+    cursor: pointer;
+    border-radius: 5px;
+    color: white;
 }
