@@ -35,7 +35,9 @@ const postTask = (obj) =>{
         },
         body: JSON.stringify(obj)
     });
-    location.reload();
+    location.href = location.origin;
+    document.getElementById("submit-btn").style.backgroundColor = "red";
+    //location.reload();
 }
 const deleteTask = (id) =>{
     fetch(`api/v1/tasks/${id}`,{

@@ -72,6 +72,8 @@ getAllTask()/*.then((response) => response.json())*/.then(data=>{
 //document.getElementById("tasks").innerHTML = getAllTask();
 submitBtn.addEventListener('click',(e)=>{
     e.preventDefault();
+    console.log(location);
+    
     let name = document.getElementById("name").value;
     postTask({"name": name, "completed":false});
 });
