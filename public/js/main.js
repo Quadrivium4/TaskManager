@@ -1,3 +1,5 @@
+
+
 let submitBtn = document.getElementById("submit-btn");
 console.log(getAllTask())
 getAllTask()/*.then((response) => response.json())*/.then(data=>{
@@ -34,10 +36,16 @@ getAllTask()/*.then((response) => response.json())*/.then(data=>{
                 el.addEventListener("click",()=>{
                     deleteTask(id);
                 })
+                el.addEventListener("touchstart",()=>{
+                    deleteTask(id);
+                });
             }else if(el.classList[0] == "modify-btn"){
                 el.addEventListener("click",()=>{
                     location.href = "./task.html?id="+id;
-                })
+                });
+                el.addEventListener("touchstart",()=>{
+                    location.href = "./task.html?id="+id;
+                });
             }else{
 
             }
@@ -67,6 +75,10 @@ getAllTask()/*.then((response) => response.json())*/.then(data=>{
 });
 //document.getElementById("tasks").innerHTML = getAllTask();
 submitBtn.addEventListener('click',()=>{
+    let name = document.getElementById("name").value;
+    postTask({"name": name, "completed":false});
+});
+submitBtn.addEventListener('touchstart',()=>{
     let name = document.getElementById("name").value;
     postTask({"name": name, "completed":false});
 });
