@@ -38,6 +38,7 @@ const updateTask = async (req, res) =>{
             runValidators: true,
 
         });
+        console.log("Update");
         console.log(tasks);
         res.status(201).json(tasks);
     } catch (err) {
@@ -47,7 +48,7 @@ const updateTask = async (req, res) =>{
 }
 const deleteTask = async (req, res) =>{
     const id = req.params.id;
-    console.log("Hi");
+    console.log("Delete");
     try {
         const task = await Task.findOneAndDelete({_id:id});
         if(!task){

@@ -70,11 +70,8 @@ getAllTask()/*.then((response) => response.json())*/.then(data=>{
     }*/
 });
 //document.getElementById("tasks").innerHTML = getAllTask();
-submitBtn.addEventListener('click',()=>{
-    let name = document.getElementById("name").value;
-    postTask({"name": name, "completed":false});
-});
-submitBtn.addEventListener('touchstart',()=>{
+submitBtn.addEventListener('click',(e)=>{
+    e.preventDefault();
     let name = document.getElementById("name").value;
     postTask({"name": name, "completed":false});
 });
