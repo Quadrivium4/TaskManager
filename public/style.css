@@ -33,6 +33,35 @@ body > h1{
     display: flex;
     width: 100%;
 }
+#submit-btn {
+    all: unset;
+    margin-left: 10px;
+    padding: 10px 20px;
+    font-size: 18px;
+    text-transform: uppercase;
+    background-color: rgb(96, 158, 194);
+    cursor: pointer;
+    border-radius: 5px;
+    width: unset;
+    color: white;
+}
+#newtask input {
+    all: unset;
+    width: 100%;
+    border: 1px solid rgb(201, 201, 201);
+    background-color: whitesmoke;
+    font-size: 22px;
+    padding: 5px;
+}
+@media(max-width: 600px){
+    #newtask{
+        display: block;
+    }
+    #submit-btn{
+        margin: 0;
+        margin-top: 10px;
+    }
+}
 .task{
     display: flex;
     align-items: center;
@@ -101,15 +130,4 @@ body > h1{
     font-size: 18px;
     padding: 5px 10px;
     border: 1px solid black;
-}
-#submit-btn{
-    all: unset;
-    margin-left: 10px;
-    padding: 10px 20px;
-    font-size: 18px;
-    text-transform: uppercase;
-    background-color: rgb(96, 158, 194);
-    cursor: pointer;
-    border-radius: 5px;
-    color: white;
 }

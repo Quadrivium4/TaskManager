@@ -44,7 +44,7 @@ const deleteTask = (id) =>{
             "content-type": "application/json"
         }
     });
-    //location.reload();
+    location.reload();
 }
 const patchTask = (obj, id) =>{
     fetch(`api/v1/tasks/${id}`,{
