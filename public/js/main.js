@@ -36,16 +36,12 @@ getAllTask()/*.then((response) => response.json())*/.then(data=>{
                 el.addEventListener("click",()=>{
                     deleteTask(id);
                 })
-                el.addEventListener("touchstart",()=>{
-                    deleteTask(id);
-                });
+                
             }else if(el.classList[0] == "modify-btn"){
                 el.addEventListener("click",()=>{
                     location.href = "./task.html?id="+id;
                 });
-                el.addEventListener("touchstart",()=>{
-                    location.href = "./task.html?id="+id;
-                });
+
             }else{
 
             }
